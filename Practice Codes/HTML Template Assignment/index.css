@@ -1,0 +1,131 @@
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+#navbar{
+background-color: aquamarine;
+text-align: center;
+padding: 15px 20px;
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+position: absolute;
+
+
+
+}
+#navbar li{
+    list-style: none;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 0 90px;
+    
+}
+#navbar ul :hover{
+    text-decoration: underline;
+    background-color: yellow;
+    font-size: large;
+
+}
+#maincontent{
+    position: absolute;
+    margin-top: 90px;
+    background-color: black;
+    border: 2px solid black;
+}
+
+#admission{
+position: absolute;
+margin-left: 800px;
+margin-top: -450px;
+font-size: xx-large;
+float: right;
+
+}
+#admission h1{
+    margin-top: -57px;
+}
+
+#admission img{
+    margin-left: 40px;
+    margin-top: 49px;
+    border: 2px solid black;
+}
+#admission img:hover{
+    opacity: 0.95;
+}
+#events{
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 50px;
+    display: inline;
+
+}
+#event1{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+    
+
+}
+#event2{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 750px;
+    float: left;
+    
+    
+}
+#event3{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 1460px;
+    
+}
+#event4{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 400px;
+    
+}
+#event5{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 1099px;
+    
+}
+#event1:hover{
+    opacity: 0.3
+}
+#event2:hover{
+    opacity: 0.3;
+}
+#event3:hover{
+    opacity: 0.3;
+    
+}
+#event4:hover{
+    opacity: 0.3;
+      
+}
+#event5:hover{
+    opacity: 0.3;
+      
+}
+#footer{
+    position: absolute;
+    left: 0;
+    bottom: -390px;
+    right: 0;
+    width: 100%;
+    background-color: rgb(186, 194, 194);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
