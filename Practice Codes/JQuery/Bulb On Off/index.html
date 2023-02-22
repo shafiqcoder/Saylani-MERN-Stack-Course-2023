@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Image Hide</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Image Hide on Hover</h1>
+    <img id="imgoff" width="200" height="200" src="./off.png">
+    <img id="imgon" width="200" height="200" src="./on.png">
+
+<button id="on-btn">Turn ON</button>
+<button id="off-btn">Turn Off</button>
+
+<script>
+    $(document).ready(function(){
+        $("#on-btn").click(function(){
+            $("#imgon").show();
+            $("#imgoff").hide();
+
+    });
+    $("#off-btn").click(function(){
+            $("#imgoff").show();
+            $("#imgon").hide();
+    });
+   
+    })
+    
+    </script>
+</body>
+</html>
