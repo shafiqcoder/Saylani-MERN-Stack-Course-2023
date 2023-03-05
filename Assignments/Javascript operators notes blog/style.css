@@ -1,0 +1,30 @@
+* {
+
+  margin: 0px;
+  
+}
+h1 {
+  background-color: coral;
+  text-align: center;
+  padding: 10px;
+
+  height: 80px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+h2,h3,h4,h5 {
+  /* padding: 10px; */
+  /* height: 50px; */
+  border: 0px;
+
+  margin: 0px;
+}
+.operatorstext {
+  text-align: center;
+  
+  padding: 0px;
+}
+h3{
+    margin: 0px;
+    padding: 0px;
+}
