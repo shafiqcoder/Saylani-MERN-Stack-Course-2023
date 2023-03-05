@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Array Methods</title>
+  </head>
+  <body>
+    <script>
+        var countNumber=[1,2,3,4,5,6]
+        countNumber.shift()
+        //It deletes array element at start
+        countNumber.unshift(88)
+        countNumber.unshift(89)// It will be at start, array index increases
+        // document.write(countNumber)
+        var countNumber2=[1,2,3,4,5,6]
+        //countNumber2.splice(start,deletecount,Number)
+        countNumber2.splice(2,0,55)// nothing will delete on index 0, only 55 will be added at index 2
+        countNumber2.splice(2,1,56)// element at index 2 will be deleted and 55 will be added on index 2
+        document.write(countNumber2)
+
+
+    </script>
+  </body>
+</html>

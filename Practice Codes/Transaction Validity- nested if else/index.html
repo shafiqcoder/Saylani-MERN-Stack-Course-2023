@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Validity - nested if else</title>
+</head>
+<body>
+    <script>
+        var accountNumber,balanceAmount;
+        accountNumber=prompt("Enter your account Number");
+        if(accountNumber==="HBL786"){
+            alert("Your account is valid");
+        balanceAmount=parseInt(prompt("Enter your account Balance"));
+        if(balanceAmount>=500){
+            document.write("Congratulations! You are eligible for transaction")
+        }
+        else{
+            document.write("Sorry you have low balance");
+        }
+        }
+        else{
+            document.write("Your account is not correct")
+        }
+    </script>
+</body>
+</html>
