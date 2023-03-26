@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+  </head>
+  <body>
+    <div id="head"><h1>Get Random Numbers of your choice</h1></div>
+    
+    <div id="output">
+      <h2>Output</h2>
+      <p id="mainpara">Your output will be displayed here.</p>
+      <h6 id="sumpara"></h6>
+      <div id="sumrandomfunction"></div>
+    </div>
+    <script>
+      function myRandomNumberfunction() {
+        var min = Number(prompt("Enter min Number"));
+        var max = Number(prompt("Enter max number"));
+        var sumofrandom = 0;
+        for (i = min; i < max; i++) {
+          var resultantNumber = Math.floor(Math.random() * (max - min) + min);
+          var myDiv = $("#sumrandomfunction");
+          document.getElementById("mainpara").innerHTML = "";
+          var paragraph = document.createElement("p");
+          paragraph.textContent =resultantNumber;
+          myDiv.append($(paragraph));
+          sumofrandom += resultantNumber;
+        }
+        let h6 = document.querySelector("h6");
+        h6.innerText = "Sum: " + sumofrandom;
+      }
+      function randomNum() {
+        var random = Math.random();
+        let outputPara = document.querySelector("p");
+        outputPara.innerText = random;
+        document.getElementById("sumpara").innerHTML = "";
+        document.getElementById("sumrandomfunction").innerHTML = "";
+      }
+      function wholerandomNum() {
+        var random2 = Math.random() * 1000;
+        let outputPara = document.querySelector("p");
+        outputPara.innerText = Math.floor(random2);
+        document.getElementById("sumpara").innerHTML = "";
+      }
+      function evenrandomNum() {
+        var random2 = Math.floor((Math.random() * 1000+1)*2);
+        if(random2%2==0){
+          let outputPara = document.querySelector("p");
+        outputPara.innerText = Math.floor(random2);
+        document.getElementById("sumpara").innerHTML = "";
+        }else{
+          let para = document.querySelector("p");
+          para.innerHTML="Please Retry, Searching..."
+        }        
+      }
+      function oddrandomNum() {
+        var random2 = Math.floor((Math.random() * 1000));
+        if(random2%2!==0){
+          let outputPara = document.querySelector("p");
+        outputPara.innerText = Math.floor(random2);
+        document.getElementById("sumpara").innerHTML = "";
+        }else{
+          let para = document.querySelector("p");
+          para.innerHTML="Please Retry, Searching..."
+        }}
+        function RandomNumberfunction() {
+        var min = Number(prompt("Enter min Number"));
+        var max = Number(prompt("Enter max number"));
+        for (i = min; i < max; i++) {
+          var resultantNumber = Math.floor(Math.random() * (max - min) + min);
+          var myDiv = $("#sumrandomfunction");
+          document.getElementById("mainpara").innerHTML = "";
+          var paragraph = document.createElement("p");
+          paragraph.textContent =resultantNumber;
+          myDiv.append($(paragraph));
+        }
+      }
+    </script>
+    <div class="btndiv">
+      <button class="btn" onclick="randomNum()">Get Random Numbers</button>
+      <button class="btn" onclick="wholerandomNum()">
+        Get Random Whole Numbers
+      </button>
+      <button class="btn" onclick="evenrandomNum()">Get Even Random Numbers</button>
+      <button class="btn" onclick="oddrandomNum()">Get Odd Random Numbers</button>
+      <button class="btn" onclick="RandomNumberfunction()">Get Random Numbers in specified Range</button>
+      <button class="btn" onclick="myRandomNumberfunction()">
+        Get Random Numbers in specified Range and their Sum
+      </button>
+    </div>
+  </body>
+</html>
