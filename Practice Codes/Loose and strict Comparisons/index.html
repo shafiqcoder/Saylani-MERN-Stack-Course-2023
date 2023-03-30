@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loose and strict comparisons</title>
+  </head>
+  <body>
+    <script>
+             
+          let age=25;
+
+          console.log(age==25);// true
+          console.log(age=="25");// true , bcz its only checking value. its loose comparison.
+          console.log(age==="25");// false , bcz its checking both value and type. its strict comparison.
+
+          console.log(typeof age);// number
+          console.log(typeof "25");// string
+
+          console.log(age!==25);// false
+          console.log(age!=="25");// true
+        
+
+
+    </script>
+  </body>
+</html>
