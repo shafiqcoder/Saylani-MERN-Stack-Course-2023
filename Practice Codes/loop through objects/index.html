@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop through objects</title>
+  </head>
+  <body>
+    <script>
+      //Four Methods to loop through objects
+      //1. for.....in statement:This statement allows you to loop through the keys of an object.
+      const object = {
+        name: "shafiqcoder",
+        age: 29,
+        email: "shafiq4w8@gmail.com",
+      };
+      for (const mykeys in object) {
+        const value = object[mykeys]; // we can also get only keys here.
+        console.log(mykeys, value); // name shafiqcoder,age 29,email shafiq4w8@gmail.com
+      }
+      //2. Object.Keys(): The keys method of the object constructor returns an array of the keys in an object.
+      const keys = Object.keys(object);
+      console.log(keys);
+      // ['name', 'age', 'email']
+
+      keys.forEach((element) => {
+        console.log("Keys are " + element);
+      });
+      //3.Object.values():The values method of the Object constructor returns an array of the values in an object.
+      const myvalues = Object.values(object);
+      myvalues.forEach((val) => {
+        console.log("Values are " + val);
+      });
+
+      //4. Object.entries():The entries method of the object constructor returns an array of subarrays where each subarray represents each property in the object and there are 2 values in the subarray:the key and the value.
+      const myentries = Object.entries(object);
+      console.log(myentries); //returns array of array.
+      myentries.forEach((entry) => {
+        const key = entry[0];
+        const value = entry[1];
+        console.log(key, value);
+        console.log("Object extracted from array of array")
+      });
+    </script>
+  </body>
+</html>
