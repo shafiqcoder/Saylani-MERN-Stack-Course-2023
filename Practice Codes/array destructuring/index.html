@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Destructuring</title>
+  </head>
+  <body>
+    <script>
+      const array = ["banana", "orange", "apple"];
+      const firstFruit = array[0];
+      const secondFruit = array[1];
+      console.log(firstFruit, secondFruit);
+      //here we have created two variables to assign the values of array to a variable.
+      //With array destructuring we can destructure this array and directly select the values that we want to assign to variable in one line.
+      const [firstfruit, secondfruit, thirdfruit] = array;
+      //What if we create four variables.
+      const [first, second, third, fourth] = array;
+      //fourth will be undefined,
+      //If we want to skip second fruit
+      const [First, , Third] = array;
+      //Destructring nested array
+      const array2 = ["banana", "orange", "apple", ["pear", "mango"]];
+      const [f, s, t, [Fourth, Fifth]] = array2;
+      console.log(f, s, t, Fourth, Fifth); //banana orange apple pear mango
+      //Default value in destructuring.
+      //If an variable is assigned beyond the length of array,default value will be used otherwise array values will be preferred.
+      const array3 = ["banana", "orange", "apple", ["pear", "mango"]];
+      const [f_irst, s_econd, t_hird, [F_ourth, F_ifth, sixth = "watermelon"]] =
+        array3;
+      console.log();
+    </script>
+  </body>
+</html>
