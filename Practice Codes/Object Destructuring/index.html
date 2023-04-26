@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Destructuring</title>
+  </head>
+  <body>
+    <script>
+      //Object Destructuring allows you to easily extract properties from an object and assign those properties to variables.
+      // Wihout Destructuring assigning properties to a variable:
+      const myobject = {
+        name: "Shafiq",
+        email: "shafiq4w8@gmail.com",
+        Contact: "03235504108",
+      };
+      const myname = myobject.name;
+      const myemail = myobject.email;
+      console.log(myname, myemail); //Shafiq shafiq4w8@gmail.com
+
+      //Here We have used two line of code , but we can achieve similar result by object destructuring in one line.
+
+      const { name, email, Contact } = myobject;
+      console.log(name, email, Contact); //same variable name as property name.
+      //Assigning different variable name.
+      const { name: username, e_mail, C_ontact } = myobject;
+      console.log(username);
+      //Destructuring Nested Objects
+      const my_newobject = {
+        name2: "Shafiq",
+        email2: "shafiq4w8@gmail.com",
+        Contact2: "03235504108",
+        languages: {
+          first2: "Urdu",
+          second2: "English",
+          third2: "Punjabi",
+        },
+      };
+      const { name2,email2, Contact2,languages:{first2,second2,third2} } =  my_newobject;
+
+    </script>
+  </body>
+</html>
