@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three ways to merge arrays</title>
+  </head>
+  <body>
+    <script>
+      //1. Spread Operator: The Spread Operator allows you to spread an iterable collection (object or array) into another collection. Using this operator for arrays, you can merge multiple arrays together.
+      const array1 = [1, 2, 3];
+      const array2 = [4, 5, 6];
+      const array3 = [7, 8, 9];
+      const merged = [...array1, ...array2, ...array3];
+      console.log(merged);
+      //2. Array.concat: The concat method of arrays allows you to combine the contents (values) of an array with new values(array,objects,string,number etc) to form a new array.you can use this to combine the values of one array with the values of another array.
+      const newarray1 = array1.concat(100, {}, "", false); //This will not mutate original array.
+      console.log(newarray1);
+      //3. Array.Push:Note, This method mutates the original array.It allows you to push new values to the end of an array.Using this, you can push the contents of an array to another array to form a merge.
+      array1.push(10)
+      console.log(array1)
+      array1.push(array2)
+      console.log(array1)//[1, 2, 3, 10, Array(3)] , Whole array is added into array1.(not the content)
+      //How to add the content of array2 in array 1 by using array.push method?
+      //First Method:
+      for (let i=0; i<array2.length;i++){
+        array1.push(array2[i])
+      }
+      //Second Method:
+      array1.push(...array2,...array3)
+
+
+
+
+    </script>
+  </body>
+</html>
