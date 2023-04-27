@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Replace with callback function</title>
+  </head>
+  <body>
+    <script>
+      //First Method: Static Method
+      const phrase = "I am 32 years old.";
+      const pattern = "32";
+      const replacement = "Y";
+      const replaced_text = phrase.replace(pattern, replacement);
+      console.log(replaced_text); //I am Y years old.
+      //Second Method: Dynamic Method Using CallBack Method
+      //Using a callback function with the replace method allows you to do something with the matched characters and define a replacement string that will be dynamically applied on each match.
+      const phrase1 = "I am 32 years old.";
+      const pattern1 = /\d/g // regex-for all digits
+      const replacement1 = function(match){
+        return`--${match}--`
+      }
+      const replaced_text1 = phrase.replace(pattern1, replacement1);
+      console.log(replaced_text1);//I am --3----2-- years old.
+
+
+    </script>
+  </body>
+</html>
