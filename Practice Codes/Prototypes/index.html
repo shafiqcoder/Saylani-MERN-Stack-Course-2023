@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Object Prototype</title>
+  </head>
+  <body>
+    <script>
+      //JS Object Prototype- Setting an object a prototype of another Object.
+      let a = {
+        name: "Shafiq",
+        language: "JavaScript",
+      };
+      let p = {
+        run: () => {
+          alert("Run");
+        },
+      };
+      // a Object don't have run property.
+      // a.run()//Uncaught TypeError: a.run is not a function
+      //Now we can add the run function property from second object p,
+      Object.setPrototypeOf(a, p); // Prototype of Object a is p.
+      a.run();
+
+      //Setting Prototype of Object p - Chain Prototype.(Nested)
+      Object.setPrototypeOf(p, {
+        fullname: "Shafiq ur Rehman",
+      });
+      console.log(a.fullname); //Shafiq ur Rehman
+    </script>
+  </body>
+</html>
