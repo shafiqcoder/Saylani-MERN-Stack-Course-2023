@@ -1,0 +1,176 @@
+body {
+  background-color: rgb(38, 45, 60);
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: medium;
+}
+.container {
+  display: block;
+  width: 400px;
+  margin: 100px auto 0;
+  padding: 50px;
+box-shadow: rgb(62, 111, 164) 0px 20px 30px -10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+li * {
+  float: left;
+}
+li,
+h3 {
+  clear: both;
+  /*  the container element will be stretched to its floated element dimensions. Another reason the clear: both; is used is to prevent the element to shift up in the remaining space */
+  list-style: none;
+  /* The list-style-type:none property can also be used to remove the markers/bullets.  */
+}
+input,
+button {
+  outline: none;
+}
+button {
+  background: #404346;
+  box-sizing: border-box;
+  border: 0px;
+  height: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  width: 60px;
+  margin: 10px 5 5;
+  font-family: sans-serif;
+  border-radius: 3px;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+button:hover {
+  color: white;
+}
+h3,
+label[for="new-task"] {
+  color: oldlace;
+  font-weight: 700;
+  /* Bold */
+  font-size: 15px;
+  border-bottom: 2px solid #ffffff;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid wheat;
+  background: #ffffff;
+  border-radius: 6px;
+  font-family: sans-serif;
+  color: rgb(39, 39, 39);
+}
+input[type="text"]:focus {
+  color: #000000;
+  font-weight: 500;
+}
+label[for="new-task"] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#new-task {
+  float: left;
+  width: 380px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: auto;
+}
+textarea#new-task {
+  float: left;
+  width: 380px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: auto;
+}
+p > button {
+}
+p > button:hover {
+  color: rgb(68, 255, 0);
+}
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 15px;
+}
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+}
+li > input[type="text"] {
+  width: 200px;
+}
+li > .delete:hover {
+  color: #cf2323;
+}
+#completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+}
+ul li input[type="text"] {
+  display: none;
+}
+ul li.editMode input[type="text"] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
+}
+.checkbox-class {
+  height: 20px;
+  width: 20px;
+}
+
+.heart-with-gradient {
+  width: 16px;
+  display: inline-block;
+  -webkit-mask: radial-gradient(circle at 60% 65%, red 64%, transparent 65%) top
+      left,
+    radial-gradient(circle at 40% 65%, red 64%, transparent 65%) top right,
+    linear-gradient(to bottom left, red 43%, transparent 43%) bottom left,
+    linear-gradient(to bottom right, red 43%, transparent 43%) bottom right;
+  -webkit-mask-size: 50% 50%;
+  -webkit-mask-repeat: no-repeat;
+  mask: radial-gradient(circle at 60% 65%, red 64%, transparent 65%) top left,
+    radial-gradient(circle at 40% 65%, red 64%, transparent 65%) top right,
+    linear-gradient(to bottom left, red 43%, transparent 43%) bottom left,
+    linear-gradient(to bottom right, red 43%, transparent 43%) bottom right;
+  mask-size: 50% 50%;
+  mask-repeat: no-repeat;
+  background: linear-gradient(red, rgb(255, 9, 9));
+}
+
+.heart-with-gradient::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+/* Heart Credit: https://getcssscan.com/css-shapes?ref=beautifulbuttons-bottom */
+.bottom {
+  text-align: center;
+}
