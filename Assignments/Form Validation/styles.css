@@ -77,7 +77,6 @@ body {
   padding: 10px;
   width: 100%;
   margin-top: 30px;
-
 }
 
 .form-control.success input {
@@ -99,3 +98,19 @@ body {
   color: #e74c3c;
 }
 
+.new-button {
+  position: absolute;
+  margin-top: 700px;
+  height: 40px;
+  width: 90px;
+  background-color: #8e44ad;
+  border: 2px solid #eae8ea;
+  border-radius: 4px;
+  color: #fff;
+}
+h3 {
+  color: #ffffff;
+  text-decoration: none;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}

@@ -8,7 +8,6 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkinputs();
   thankyou();
-
 });
 
 function checkinputs() {
@@ -48,9 +47,30 @@ function checkinputs() {
 }
 
 function thankyou() {
-  if (checkinputs() === true) {
-    alert("Thank you for subscribing!");
-  }
+  console.log("Good to go");
+  localStorage.setItem("username", username.value);
+  localStorage.setItem("email", email.value);
+  localStorage.setItem("password", password.value);
+  localStorage.setItem("password_confirm", password_confirm.value);
+  var newbutton = document.createElement("button");
+  var t = document.createTextNode("Local Storage");
+  newbutton.appendChild(t);
+  document.body.appendChild(newbutton);
+  let enter = newbutton.classList.toggle("new-button");
+  newbutton.id = "newbtn";
+  newbutton.onclick = () => {
+    const targetDiv = document.getElementById("container");
+    if (targetDiv.style.display !== "none") {
+      targetDiv.style.display = "none";
+    }
+    let header = document.querySelector("#localstoragetext");
+    header.innerHTML =
+      `Username : ${localStorage.getItem("username")}` +
+      "<br />" +
+      `Email : ${localStorage.getItem("email")}` +
+      "<br />" +
+      `Password : ${localStorage.getItem("password")}`;
+  };
 }
 
 function setErrorFor(Input, message) {
@@ -63,10 +83,9 @@ function setErrorFor(Input, message) {
 }
 function setSuceessFor(input) {
   const formControl = input.parentElement;
-  console.log(formControl)
+  console.log(formControl);
   formControl.className = "form-control success";
-  console.log(formControl.className)
-
+  console.log(formControl.className);
 }
 
 function ValidateEmail(mail) {
