@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide and Unhide div using a button</title>
+  </head>
+  <body>
+    <div style="visibility: visible;" id="maindiv">
+      <!-- This should be visible by default -->
+      <h1>
+        I am main div, my visibility can be changed using the below button.
+      </h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+        nulla, minus dolorum delectus alias nam ipsum, sunt sed sapiente
+        mollitia doloribus autem commodi blanditiis nisi molestias porro
+        laudantium nobis ut.I
+      </p>
+    </div>
+    <button onclick="hide_unhide()">Click here</button>
+    <script>
+    
+        function hide_unhide(){
+          // This function will check default visibility status
+            var maindiv=document.getElementById("maindiv");
+            var visibility_status=maindiv.style.visibility;
+            if(visibility_status=="visible"){
+                maindiv.style.visibility="hidden";
+            }else{
+                maindiv.style.visibility="visible";
+            }
+            
+         
+        }
+    </script>
+  </body>
+</html>

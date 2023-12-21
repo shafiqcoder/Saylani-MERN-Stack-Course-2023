@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Page Title</title>
+  </head>
+  <body>
+    <!-- <img src="btn.png" onClick="greetTheUser();" /> -->
+    <img src="/images/btn.png" onmouseover="greetTheUser();" />
+
+    <!-- <a
+      href="index.html"
+      onMouseover="this.style.color='red'"
+      ;
+      onmouseout="this.style.color='green'"
+      >Home Page</a
+    > -->
+
+    <!-- <label>Email</label><br />
+    <input
+      type="text"
+      size="30"
+      onFocus="this.style.backgroundColor = 'yellow'"
+      onblur="this.style.backgroundColor = 'red'"
+    /> -->
+
+    Email:<br />
+    <input
+      type="text"
+      size="30"
+      id="emailinfo"
+      onFocus="inputChangeFunction('emailinfo', 'onfocus')"
+      onBlur="inputChangeFunction('emailinfo', 'onblur')"
+    />
+
+    <form onSubmit="checkAddress('email');">
+      Email:
+      <input type="text" id="email" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p id="slowLoris">
+      Slow lorises are a group of several species of strepsirrhine primates
+      which make up the genus Nycticebus.
+      <a href="javascript:void(0);" onClick="expandLoris();"
+        ><em>Click for more.</em></a
+      >
+    </p>
+  </body>
+</html>
+
+<script src="./js/myScripts.js"></script>
+
+<!-- <script>
+  function checkAddress(fieldId) {
+    if (document.getElementById(fieldId).value === "") {
+      alert("Email address required.");
+    } else {
+      var fieldval = document.getElementById(fieldId).value;
+      alert(fieldval);
+    }
+  }
+
+  function onFocusChangeColor(fieldID) {
+    document.getElementById(fieldID).style.backgroundColor = "yellow";
+  }
+  function onBlurChangeColor(fieldID) {
+    document.getElementById(fieldID).style.backgroundColor = "red";
+  }
+  function greetTheUser() {
+    alert("Eid Mubarak.....");
+  }
+</script> -->
